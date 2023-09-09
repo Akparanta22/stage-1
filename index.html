@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stage 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <script>
+   function updateUTCTime() {
+            const now = new Date();
+            const utcTimeString = now.toISOString(); // Get UTC time in ISO 8601 format
+            document.getElementById("utc-time").textContent = utcTimeString;
+        }
+
+        // Update the UTC time every second (1000 milliseconds)
+        setInterval(updateUTCTime, 1000);
+
+        // Initial update
+        updateUTCTime();
+    </script>
+</head>
+<body>
+<div class="photo"><img src="images/20221026_170527.jpg" alt="Akparanta22" height="110px"
+    width="110px" data-testid="slackdisplayimage"></div>
+<div data-testid="slackusername"><h1>Akparanta22</h1></div>
+<div data-testid="myTrack">Frontend development</div>
+<a href="https://github.com/Akparanta22" target="_blank" data-testid="githuburl">click here for my Github</a>
+<div data-testid="currentdayoftheweek">FRIDAY</div>
+<p id="utc-time">my current UTC </p>
+</body>
+</html>
